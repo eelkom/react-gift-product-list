@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Loading from '@/components/Loading';
 import useTheme from '../hooks/useTheme';
 import { generatePath, useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/routes/Routes';
+import { ROUTES } from '@/routes/routes';
 
 const GiftThemeSection = () => {
   const { themes, loading, error } = useTheme();

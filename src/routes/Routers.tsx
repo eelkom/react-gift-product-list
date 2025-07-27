@@ -3,7 +3,7 @@ import MyPage from '@/page/My';
 import OrderPage from '@/page/Order';
 import NotFound from '@/page/NotFound';
 import { Route, Routes } from 'react-router-dom';
-import { ROUTES } from './Routes';
+import { ROUTES } from './routes';
 import RequireAuth from './RequireAuth';
 import HOME from '@/page/Home';
 import ThemesPage from '@/page/Themes';
@@ -29,7 +29,7 @@ const AppRouter = () => {
           </RequireAuth>
         }
       />
-       <Route path={ROUTES.THEMES} element={<ThemesPage />} />
+      <Route path={ROUTES.THEMES} element={<ThemesPage />} />
       <Route path={ROUTES.NOTFOUND} element={<NotFound />} />
     </Routes>
   );

@@ -4,7 +4,7 @@ import { useUserInfo } from '@/contexts/UserInfoContext';
 import type { OrderInfoValues } from '..';
 import { toast } from 'react-toastify';
 import postOrderInfo from '../utils/postOrderInfo';
-import { ROUTES } from '@/routes/Routes';
+import { ROUTES } from '@/routes/routes';
 import { useForm } from 'react-hook-form';
 
 const useOrderForm = () => {

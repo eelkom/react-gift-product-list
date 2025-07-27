@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import type { ThemeIdInfoData } from '..';
 import axios from 'axios';
 import { requests } from '@/api/requests';
-import { ROUTES } from '@/routes/Routes';
+import { ROUTES } from '@/routes/routes';
 
 const useThemeInfo = () => {
   const { id } = useParams<{ id: string }>();

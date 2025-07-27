@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import useInput from './hooks/useInput';
 import InputField from './components/InputField';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/routes/Routes';
+import { ROUTES } from '@/routes/routes';
 import useLogin from './hooks/useLogin';
 
 const Container = styled.div`

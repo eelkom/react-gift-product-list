@@ -3,7 +3,7 @@ import { filters, generations } from '@/data/categoryDatas';
 import useSearchParamState from '../hooks/useSearchParamState';
 import useToggleCollapse from '../hooks/useToggleCollapse';
 import { generatePath, useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/routes/Routes';
+import { ROUTES } from '@/routes/routes';
 import Loading from '@/components/Loading';
 import useRanking from '../hooks/useRanking';
 import toLocaleString from '@/utils/toLocaleString';

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { generatePath, Link } from 'react-router-dom';
 import type { ItemData } from '..';
-import { ROUTES } from '@/routes/Routes';
+import { ROUTES } from '@/routes/routes';
 
 const ItemBox = ({ item }: { item: ItemData }) => {
   if (!item) return null;

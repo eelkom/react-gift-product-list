@@ -1,6 +1,6 @@
 import { Navigate, useLocation } from 'react-router-dom';
 import { useUserInfo } from '@/contexts/UserInfoContext';
-import { ROUTES } from './Routes';
+import { ROUTES } from './routes';
 import { type PropsWithChildren } from 'react';
 
 const RequireAuth = ({ children }: PropsWithChildren) => {

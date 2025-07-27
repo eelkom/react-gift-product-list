@@ -1,6 +1,6 @@
 import { BackButton, Container, LogoImage, LogoLink, Nav, UserIconLink } from './styles';
 import { useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/routes/Routes';
+import { ROUTES } from '@/routes/routes';
 
 const BackIcon = () => (
   <svg
