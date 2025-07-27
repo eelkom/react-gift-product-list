@@ -46,7 +46,7 @@ interface InputFieldProps {
   type?: React.HTMLInputTypeAttribute;
 }
 
-const InputField = ({ hook, placeholder, type }: InputFieldProps) => {
+const InputField = ({ hook, placeholder, type = 'text' }: InputFieldProps) => {
   const { error, ...rest } = hook;
   return (
     <InputContainer>
