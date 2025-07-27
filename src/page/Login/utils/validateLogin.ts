@@ -1,3 +1,5 @@
+type FieldType = 'email' | 'password';
+
 const NUM = 8;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export const phoneNumberRegex = /^010\d{8}$/;
@@ -22,7 +24,6 @@ const validateEmail = (value: string): string => {
   }
 };
 
-type FieldType = 'email' | 'password';
 const validators = {
   email: validateEmail,
   password: validatePassword,

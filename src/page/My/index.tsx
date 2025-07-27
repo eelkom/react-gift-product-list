@@ -3,14 +3,6 @@ import { ROUTE_PATH } from '@/routes/routePath';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.semantic.background.fill};
-`;
-
 const MyPage = () => {
   const { userInfo, setLogoutSession } = useUserInfo();
   const navigate = useNavigate();
@@ -31,3 +23,11 @@ const MyPage = () => {
 };
 
 export default MyPage;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: ${({ theme }) => theme.colors.semantic.background.fill};
+`;

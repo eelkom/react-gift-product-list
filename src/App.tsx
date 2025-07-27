@@ -7,14 +7,6 @@ import AppRouter from './routes/Routers';
 import { UserInfoProvider } from './contexts/UserInfoContext';
 import { ToastContainer } from 'react-toastify';
 
-const AppContainer = styled.div`
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  background-color: ${({ theme }) => theme.colors.semantic.background.default};
-  padding-top: 2.75rem;
-`;
-
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -32,3 +24,11 @@ function App() {
 }
 
 export default App;
+
+const AppContainer = styled.div`
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: ${({ theme }) => theme.colors.semantic.background.default};
+  padding-top: 2.75rem;
+`;

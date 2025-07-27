@@ -1,6 +1,28 @@
 import styled from '@emotion/styled';
 import type { ComponentPropsWithoutRef } from 'react';
 
+interface fieldProps extends ComponentPropsWithoutRef<'input'> {
+  error?: string;
+}
+
+interface InputFieldProps {
+  field: fieldProps;
+  placeholder: string;
+  type?: React.HTMLInputTypeAttribute;
+}
+
+const InputField = ({ field, placeholder, type = 'text' }: InputFieldProps) => {
+  const { error, ...rest } = field;
+  return (
+    <InputContainer>
+      <Input placeholder={placeholder} type={type} {...rest} />
+      {error && <P>{error}</P>}
+    </InputContainer>
+  );
+};
+
+export default InputField;
+
 const InputContainer = styled.div`
   margin: 0;
   padding: 0;
@@ -35,25 +57,3 @@ const P = styled.p`
   margin: 0px;
   text-align: left;
 `;
-
-export interface InputHook extends ComponentPropsWithoutRef<'input'> {
-  error?: string;
-}
-
-interface InputFieldProps {
-  hook: InputHook;
-  placeholder: string;
-  type?: React.HTMLInputTypeAttribute;
-}
-
-const InputField = ({ hook, placeholder, type = 'text' }: InputFieldProps) => {
-  const { error, ...rest } = hook;
-  return (
-    <InputContainer>
-      <Input placeholder={placeholder} type={type} {...rest} />
-      {error && <P>{error}</P>}
-    </InputContainer>
-  );
-};
-
-export default InputField;

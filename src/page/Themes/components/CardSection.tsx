@@ -8,7 +8,7 @@ interface CardSectionProps {
 const CardSection = ({ themeIdInfo }: CardSectionProps) => {
   if (!themeIdInfo) return null;
   return (
-    <Section key={themeIdInfo.themeId} bg={themeIdInfo.backgroundColor}>
+    <Section bg={themeIdInfo.backgroundColor}>
       <Subtitle2Bold>{themeIdInfo.name}</Subtitle2Bold>
       <Title1Bold>{themeIdInfo.title}</Title1Bold>
       <Body1Regular>{themeIdInfo.description}</Body1Regular>

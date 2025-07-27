@@ -25,8 +25,8 @@ const GiftRankingSection = () => {
   const { isCollapsed, visibleItemsCount, toggleCollapse } = useToggleCollapse(rankingDatas.length);
 
   const navigate = useNavigate();
-  const handleItemClick = (id: string) => {
-    navigate(generatePath(ROUTE_PATH.ORDER, { id }));
+  const handleItemClick = (id: number) => {
+    navigate(generatePath(ROUTE_PATH.ORDER, { id: String(id) }));
   };
 
   const renderContent = () => {
@@ -38,7 +38,7 @@ const GiftRankingSection = () => {
       <>
         <RankContainer>
           {rankingDatas.slice(0, visibleItemsCount).map((rank, index) => (
-            <RankItem key={rank.id} onClick={() => handleItemClick(String(rank.id))}>
+            <RankItem key={rank.id} onClick={() => handleItemClick(rank.id)}>
               <RankNumber>{index + 1}</RankNumber>
               <ItemContainer>
                 <Image src={rank.imageURL} alt={rank.name} />
