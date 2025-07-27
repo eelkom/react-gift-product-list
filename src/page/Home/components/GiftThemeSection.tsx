@@ -2,14 +2,14 @@ import styled from '@emotion/styled';
 import Loading from '@/components/Loading';
 import useTheme from '../hooks/useTheme';
 import { generatePath, useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 
 const GiftThemeSection = () => {
   const { themes, loading, error } = useTheme();
   const navigate = useNavigate();
 
   const handleClick = (id: string) => {
-    navigate(generatePath(ROUTES.THEMES, { id }));
+    navigate(generatePath(ROUTE_PATH.THEMES, { id }));
   };
 
   const renderContent = () => {

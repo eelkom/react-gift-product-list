@@ -1,6 +1,6 @@
 import { Navigate, useLocation } from 'react-router-dom';
 import { useUserInfo } from '@/contexts/UserInfoContext';
-import { ROUTES } from './routes';
+import { ROUTE_PATH } from './routePath';
 import { type PropsWithChildren } from 'react';
 
 const RequireAuth = ({ children }: PropsWithChildren) => {
@@ -10,7 +10,7 @@ const RequireAuth = ({ children }: PropsWithChildren) => {
   return isLoggedIn ? (
     <>{children}</>
   ) : (
-    <Navigate to={ROUTES.LOGIN} replace state={{ from: location }} />
+    <Navigate to={ROUTE_PATH.LOGIN} replace state={{ from: location }} />
   );
 };
 

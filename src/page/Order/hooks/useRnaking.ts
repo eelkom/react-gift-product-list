@@ -1,5 +1,5 @@
 import { requests } from '@/api/requests';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ const useRanking = (id: string) => {
         const data = await requests.fetchSummary(id);
         setProductSummaryData(data);
       } catch {
-        navigate(ROUTES.HOME);
+        navigate(ROUTE_PATH.HOME);
         return;
       }
     };

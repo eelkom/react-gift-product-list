@@ -1,6 +1,6 @@
 import { BackButton, Container, LogoImage, LogoLink, Nav, UserIconLink } from './styles';
 import { useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 
 const BackIcon = () => (
   <svg
@@ -51,7 +51,7 @@ const Navigation = () => {
           <LogoImage src="/선물하기.webp" alt="카카오 선물하기 로고" />
         </LogoLink>
 
-        <UserIconLink onClick={() => navigate(ROUTES.MY)}>
+        <UserIconLink onClick={() => navigate(ROUTE_PATH.MY)}>
           <UserIcon />
         </UserIconLink>
       </Nav>

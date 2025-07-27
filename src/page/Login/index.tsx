@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import useInput from './hooks/useInput';
 import InputField from './components/InputField';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 import useLogin from './hooks/useLogin';
 
 const Container = styled.div`
@@ -54,7 +54,7 @@ const LoginPage = () => {
   const { loginAndStoreSession } = useLogin();
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || ROUTES.MY;
+  const from = location.state?.from?.pathname || ROUTE_PATH.MY;
   const username = useInput('email');
   const password = useInput('password');
 

@@ -1,5 +1,5 @@
 import { requests } from '@/api/requests';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 import axios from 'axios';
 import type { OrderInfoValues } from '..';
 
@@ -17,7 +17,7 @@ const postOrderInfo = async ({ orderData, navigate, id }: postOrderInfoProps): P
     if (axios.isAxiosError(error)) {
       const status = error.response?.data?.data?.statusCode;
       if (status === 401) {
-        navigate(ROUTES.LOGIN);
+        navigate(ROUTE_PATH.LOGIN);
       }
     }
     return false;

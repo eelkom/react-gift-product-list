@@ -1,5 +1,5 @@
 import { useUserInfo } from '@/contexts/UserInfoContext';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ const MyPage = () => {
 
   const onClick = () => {
     setLogoutSession();
-    navigate(ROUTES.LOGIN);
+    navigate(ROUTE_PATH.LOGIN);
   };
 
   return (

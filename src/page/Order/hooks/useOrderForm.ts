@@ -4,7 +4,7 @@ import { useUserInfo } from '@/contexts/UserInfoContext';
 import type { OrderInfoValues } from '..';
 import { toast } from 'react-toastify';
 import postOrderInfo from '../utils/postOrderInfo';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 import { useForm } from 'react-hook-form';
 
 const useOrderForm = () => {
@@ -38,7 +38,7 @@ const useOrderForm = () => {
       구매 수량: ${orderData.receiverInfos.length}
       발신자 이름: ${orderData.name}
       메시지: ${orderData.message}`);
-      navigate(ROUTES.HOME);
+      navigate(ROUTE_PATH.HOME);
     }
   };
 

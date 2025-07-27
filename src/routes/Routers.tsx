@@ -3,18 +3,18 @@ import MyPage from '@/page/My';
 import OrderPage from '@/page/Order';
 import NotFound from '@/page/NotFound';
 import { Route, Routes } from 'react-router-dom';
-import { ROUTES } from './routes';
 import RequireAuth from './RequireAuth';
 import HOME from '@/page/Home';
 import ThemesPage from '@/page/Themes';
+import { ROUTE_PATH } from './routePath';
 
 const AppRouter = () => {
   return (
     <Routes>
-      <Route path={ROUTES.HOME} element={<HOME />} />
-      <Route path={ROUTES.LOGIN} element={<LoginPage />} />
+      <Route path={ROUTE_PATH.HOME} element={<HOME />} />
+      <Route path={ROUTE_PATH.LOGIN} element={<LoginPage />} />
       <Route
-        path={ROUTES.MY}
+        path={ROUTE_PATH.MY}
         element={
           <RequireAuth>
             <MyPage />
@@ -22,15 +22,15 @@ const AppRouter = () => {
         }
       />
       <Route
-        path={ROUTES.ORDER}
+        path={ROUTE_PATH.ORDER}
         element={
           <RequireAuth>
             <OrderPage />
           </RequireAuth>
         }
       />
-      <Route path={ROUTES.THEMES} element={<ThemesPage />} />
-      <Route path={ROUTES.NOTFOUND} element={<NotFound />} />
+      <Route path={ROUTE_PATH.THEMES} element={<ThemesPage />} />
+      <Route path={ROUTE_PATH.NOTFOUND} element={<NotFound />} />
     </Routes>
   );
 };

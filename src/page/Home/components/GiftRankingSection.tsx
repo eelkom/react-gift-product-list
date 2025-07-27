@@ -3,7 +3,7 @@ import { filters, generations } from '@/data/categoryDatas';
 import useSearchParamState from '../hooks/useSearchParamState';
 import useToggleCollapse from '../hooks/useToggleCollapse';
 import { generatePath, useNavigate } from 'react-router-dom';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 import Loading from '@/components/Loading';
 import useRanking from '../hooks/useRanking';
 import toLocaleString from '@/utils/toLocaleString';
@@ -26,7 +26,7 @@ const GiftRankingSection = () => {
 
   const navigate = useNavigate();
   const handleItemClick = (id: string) => {
-    navigate(generatePath(ROUTES.ORDER, { id }));
+    navigate(generatePath(ROUTE_PATH.ORDER, { id }));
   };
 
   const renderContent = () => {

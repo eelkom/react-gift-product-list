@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import type { ThemeIdInfoData } from '..';
 import axios from 'axios';
 import { requests } from '@/api/requests';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 
 const useThemeInfo = () => {
   const { id } = useParams<{ id: string }>();
@@ -22,7 +22,7 @@ const useThemeInfo = () => {
         if (axios.isAxiosError(error)) {
           const status = error.response?.status;
           if (status === 404) {
-            navigate(ROUTES.HOME);
+            navigate(ROUTE_PATH.HOME);
           }
         }
       }

@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import { generatePath, Link } from 'react-router-dom';
 import type { ItemData } from '..';
-import { ROUTES } from '@/routes/routes';
+import { ROUTE_PATH } from '@/routes/routePath';
 
 const ItemBox = ({ item }: { item: ItemData }) => {
   if (!item) return null;
 
   return (
-    <Link to={generatePath(ROUTES.ORDER, { id: String(item.id) })} data-discover>
+    <Link to={generatePath(ROUTE_PATH.ORDER, { id: String(item.id) })} data-discover>
       <ItemOntainer>
         <ItemImg alt={item.name} src={item.imageURL} />
         <ItemBrandInfo>{item.brandInfo.name}</ItemBrandInfo>
